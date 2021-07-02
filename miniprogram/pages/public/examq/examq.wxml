@@ -1,0 +1,127 @@
+<wxs src="../../tools.wxs" module="JSON" />
+<template name="answer">
+  <view class="all-wrap">
+    <scroll-view scrollY style="height:100%;">
+      <view bindtouchend="bindtouchend" bindtouchmove="bindtouchmove" bindtouchstart="touchstart" class="answer-wrap" wx:if="{{item.typecode == '01' || item.typecode== '03'}}">
+        <view class="answer-title">
+          <!-- <image src="../../images/jkt/danxuan.png" wx:if="{{item.typecode=='01'}}"></image>
+          <image src="../../images/jkt/panduan.png" wx:if="{{item.typecode=='03'}}"></image> -->
+          <view style="width:100%">
+            <text class="typename">{{item.typename}}</text><text>、{{item.title}}</text>
+          </view>
+        </view>
+        <view class="answer-ziyuan" bindtap='previewImg'>
+          <image mode="aspectFit" src="{{item.imgs[0]}}" wx:if="{{item.mediatype=='02'}}"></image>
+        </view>
+        <view class="answer-select">
+          <view bindtap="selectAnswer" class="direction" data-value="{{JSON.stringify(item)}}" data-code="{{optionItem.code}}" data-id="{{item._id}}" data-answer="{{item.answer}}" data-selectedcode="{{optionitem.code}}" data-ind="{{ind}}" wx:for="{{item.options}}" wx:for-index="ind" wx:for-item="optionItem" wx:key="index">
+            <view class="answer-left">
+                <text class="option" wx:if="{{!optionItem.selected}}">{{optionItem.code}}</text>
+                <text class="option-active" wx:if="{{optionItem.selected}}">{{optionItem.code}}</text>
+                
+            </view>
+            <view class="answer-right">
+                <text class="text" wx:if="{{!optionItem.selected}}">{{optionItem.content}}</text>
+                <text class="text-active " wx:if="{{optionItem.selected}}">{{optionItem.content}}</text>
+                
+            </view>
+          </view>
+        </view>
+        <view class="explantion" wx:if="{{item.selectedresult}}">
+          <view class="explanation-title">
+            <view class="explanation-left">解释</view>
+          </view>
+          <view class="explanation-text">{{item.comments}}</view>
+        </view>
+      </view>
+
+
+      <view bindtouchend="bindtouchend" bindtouchmove="bindtouchmove" bindtouchstart="touchstart" class="answer-wrap" wx:if="{{item.typecode == '02'}}">
+        <view class="answer-title">
+          <!-- <image src="../../images/jkt/duoxuan.png" wx:if="{{item.typecode=='02'}}"></image> -->
+          <view style="width:100%">
+            <text class="typename">{{item.typename}}</text><text>、{{item.title}}</text>
+          </view>
+        </view>
+        <view class="answer-ziyuan" bindtap='previewImg'>
+          <image mode="aspectFit" src="{{item.imgs[0]}}" wx:if="{{item.mediatype=='02'}}"></image>
+        </view>
+        <view class="answer-select">
+          <view bindtap="selectAnswerMore" class="direction" data-value="{{JSON.stringify(item)}}" data-code="{{optionItem.code}}" data-id="{{item._id}}" data-answer="{{item.answer}}" data-selectedcode="{{optionItem.code}}" data-ind="{{ind}}" wx:for="{{item.options}}" wx:for-index="ind" wx:for-item="optionItem" wx:key="index">
+            <view class="answer-left">
+                <!--未提交-->
+                <text class="option" wx:if="{{!optionItem.selected}}">{{optionItem.code}}</text>
+                <text class="option-active" wx:if="{{optionItem.selected}}">{{optionItem.code}}</text>
+            </view>
+            <view class="answer-right">
+                <text class="text" wx:if="{{!optionItem.selected}}">{{optionItem.content}}</text>
+                <text class="text-active" wx:if="{{optionItem.selected}}">{{optionItem.content}}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="explantion" wx:if="{{item.selectedresult}}">
+          <view class="explanation-title">
+            <view class="explanation-left">解释</view>
+          </view>
+          <view class="explanation-text">{{item.comments}}</view>
+        </view>
+
+        <view style="height:40px;"></view>
+        <view style="padding:20rpx;margin-top: 20rpx;background-color:#f6f6f6;" wx:if="{{false}}">
+          <view bindtap="moreSelectSub" class="button" data-value="{{JSON.stringify(item)}}" data-answer="{{item.answer}}" data-id="{{item._id}}">提交</view>
+        </view>
+
+      </view>
+
+
+
+
+       <view bindtouchend="bindtouchend" bindtouchmove="bindtouchmove" bindtouchstart="touchstart" class="answer-wrap" wx:if="{{item.typecode == '04'}}">
+        <view class="answer-title">
+          <view><text class="typename">{{item.typename}}</text><text>、{{item.title}} </text></view>
+        </view>
+        <view class="answer-ziyuan">
+          <image mode="aspectFit" src="{{item.media}}" wx:if="{{item.media_type=='1'}}"></image>
+        </view>
+        <view class="answer-select">
+            <view class="direction" data-code="{{itemName.code}}" data-value="{{JSON.stringify(item)}}" data-answer="{{item.answer}}" data-id="{{item._id}}" data-index="{{index}}" data-qutype="{{item.typename}}" wx:for="{{item.options}}" wx:for-index="index" wx:for-item="itemName" wx:key="index">
+              <view class="answer-left">
+                <!--未提交-->
+                <text class="option">{{index+1}}</text>
+              </view>
+              <view class="answer-right" wx:if="{{!item.selected}}">
+                <input class="text" style="text-align: left;background-color: #e2c18d;padding: 20rpx 0 20rpx 10rpx;" placeholder="请输入" bindinput="bindKeyInput" bindblur="bindBlurInput" data-index="{{index}}" value="{{itemName['text']}}"/>
+              </view>
+
+              <view class="answer-right right" wx:if="{{item.selected && item.status == 1}}">
+                <input class="text" style="text-align: left;background-color: #e2c18d;padding: 20rpx 0 20rpx 10rpx;" value="{{itemName['text']}}"/>
+              </view>
+
+              <view class="answer-status status" wx:if="{{item.selected && item.status == 0 && itemName['value'] == 1}}">
+                <input class="text" style="text-align: left;background-color: #e2c18d;padding: 20rpx 0 20rpx 10rpx;" value="{{itemName['text']}}"/>
+              </view>
+
+              <view class="answer-status wrong" wx:if="{{item.selected && item.status == 0 && itemName['value'] == 0}}">
+                <input class="text" style="text-align: left;background-color: #e2c18d;padding: 20rpx 0 20rpx 10rpx;" value="{{itemName['text']}}"/>
+              </view>
+
+            </view>
+        </view>
+
+        <view class="answer" style="padding-left:20rpx;" wx:if="{{item.selected}}">
+        <text>答案：{{item.answer}}</text>
+        </view>
+        
+        <view style="padding:20rpx;margin-top: 20rpx;background-color:#f6f6f6;" wx:if="{{item.typecode == '04'}}">
+          <view bindtap="newMoreSelectSub" class="button" data-value="{{JSON.stringify(item)}}" data-answer="{{item.answer}}" data-id="{{item._id}}">提交</view>
+        </view>
+      </view>
+
+
+      
+     
+      <view style="height:100px;width:100%;background:#f5f6f7"></view>
+    </scroll-view>
+  </view>
+</template>

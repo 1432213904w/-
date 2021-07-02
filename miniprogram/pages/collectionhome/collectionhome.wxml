@@ -1,0 +1,75 @@
+<!-- <view class="page">
+    <view class="wrap">
+        <view>
+            <text class="title">练习题目</text>
+            <text class="car">{{name}}</text>
+        </view>
+      
+        <view>
+            <text class="title">联系模式</text>
+            <text class="car">随机练习</text>
+        </view>
+        
+        <view>
+            <text class="title">出题规则</text>
+            <text class="car">按规定随机抽取</text>
+        </view>
+    
+        <view class="btn-area" bindtap="defaultGo">
+        <text >马上进入</text>
+        </view>
+    </view>
+</view> -->
+
+
+
+
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="weui-form">
+		<view class="weui-form__text-area">
+			<h2 class="weui-form__title">练习题目</h2>
+			<view class="weui-form__desc">{{name}},{{total}}</view>
+		</view>
+		<view class="weui-form__control-area">
+			<view class="weui-cells__group weui-cells__group_form">
+				<!-- <view class="weui-cells__title">表单组标题</view> -->
+				<view class="weui-cells weui-cells_form">
+					<view class="weui-cell weui-cell_active">
+							<view class="weui-cell__hd">							
+                            <label class="weui-label">练习模式</label>
+                        </view>
+                        <view class="weui-cell__bd">
+							<input class="weui-input" placeholder=" " value="收藏回顾" disabled />
+						</view>
+					</view>
+					<view class="weui-cell weui-cell_active">
+						<view class="weui-cell__hd">							
+                            <label class="weui-label">出题规则</label>
+                        </view>
+						<view class="weui-cell__bd">
+							<input class="weui-input" placeholder=" " value="按规定随机抽取" placeholder-class="weui-input__placeholder" disabled/>
+						</view>
+					</view>
+					<!-- <view class="weui-cell weui-cell_active"> -->
+						<!-- <view class="weui-cell__hd">							
+                            <label class="weui-label">联系电话</label>
+                        </view>
+						<view class="weui-cell__bd">
+							<input class="weui-input" placeholder="填写绑定的电话号码" type="number" placeholder-class="weui-input__placeholder" />
+						</view> -->
+					<!-- </view> -->
+				</view>
+			</view>
+		</view>
+		 
+		<view class="weui-form__opr-area"   >
+			<a class="weui-btn" style="background:#fbb03b;" bindtap="defaultGo">开始答题</a>
+		</view>
+		<!-- <view class="weui-form__tips-area">
+			<view class="weui-form__tips">
+                表单页提示，居中对齐
+			</view>
+		</view> -->
+		 
+	</view>
+</view>

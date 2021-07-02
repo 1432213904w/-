@@ -1,0 +1,33 @@
+
+<import src="../public/viewq/viewq.wxml"></import>
+<view class="page">
+  <swiper autoplay="{{autoplay}}" bindchange="pageChange" class="{{videoMedia&&videoctrl?'flexauto':'noflex'}}" current="{{current}}" duration="500" indicatorDots="{{false}}" interval="{{interval}}">
+    <swiper-item wx:for="{{questions}}" wx:for-item="item" wx:key="key">
+      <template is="answer" data="{{item:item,textTab:textTab,videoctrl:videoctrl,testMode:testMode}}"></template>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="footer">
+  <view class="header">
+    <view class="h-left">
+      <view>
+        <image src="/images/q_answer_sheet_right.png"></image>
+        <text style="color:#33c500">{{greenNum}}</text>
+      </view>
+      <view>
+        <image src="/images/q_answer_sheet_wrong.png"></image>
+        <text style="color:#ff3030">{{redNum}}</text>
+      </view>
+      <view>
+        <image src="/images/q_answer_sheet_number.png"></image>
+        <text>{{current*1+1}}/{{questions.length}}</text>
+      </view>
+    </view>
+    <view bindtap="newUp_exam" class="h-right" wx:if="{{timeshow}}">
+      <image src="/images/jexam.png"></image>
+      <text style="color: #1bd0ad;">返回</text>
+    </view>
+  </view>
+
+</view>

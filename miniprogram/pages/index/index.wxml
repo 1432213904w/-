@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view>
+
+    <view class="God-wrap">
+        <view class="God-title">
+            <text style="color:#000;font-size:27rpx">当前选择题库为：{{category.name}}</text>
+        </view>
+    </view>
+
+    <view class="items">
+        <view bindtap="examGo"> 
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020111801.png?sign=25185a7261373cf2defcf27e3dc1de14&t=1605618027" />
+            <text>在线考试</text>
+        </view>
+        <view bindtap="orderGo" data-mode="1">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020101001.png?sign=d175923237116ca44d2a95c62e32689c&t=1603293806" />
+            <text>顺序练习</text>
+        </view>   
+        <view bindtap="orderGo" data-mode="2">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020101003.png?sign=b9a804fe07556d9302374ad05c64cf6f&t=1603293827" />
+            <text>随机练习</text>
+        </view>      
+        <view bindtap="defaultGo" data-mode="0">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020101604.png?sign=1a07c3ea88acb37c2ca33e5fad73546a&t=1603293869" />
+            <text>我的错题</text>
+        </view>        
+        <view bindtap="defaultGo" data-mode="1">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020101505.png?sign=1464c73c8560f7fab2f81639476e7e1c&t=1603293899" />
+            <text>我的收藏</text>
+        </view>
+    </view>
+    <view class="items">
+        <view bindtap="historyGo">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020111802.png?sign=55a711e31d94ec7e5ff7048814eb436e&t=1605618223" />
+            <text>答题记录</text>
+        </view>  
+        <view bindtap="rankGo">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020101506.png?sign=8d60112a779c2cba2f1810f3974837ad&t=1603293944" />
+            <text>成绩排名</text>
+        </view>  
+        <view bindtap="ruleGo">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020101507.png?sign=0d6998e21e5f077e17d9a0f1ed51d4c3&t=1603293971" />
+            <text>使用帮助</text>
+        </view>   
+        <view bindtap="aboutGo">
+            <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020101603.png?sign=78eb7dfcb4a5f6bfb0ff537a322c9100&t=1603294001" />
+            <text>关于我们</text>
+        </view>
+    </view>
+    <component-banner></component-banner>
+
+
+    <view class="cell-wrap cell-one">
+        <view bindtap="myQuestion" class="cell">
+            <view class="cell-left">
+                <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020111803.png?sign=8aeadb277c93a576c13e6f8529eb35fe&t=1605619291" style="width: 45rpx;height: 45rpx;"></image>
+                <text>切换题库</text>
+            </view>
+            <view class="cell-right">
+                <text>{{category.name}}</text>
+                <image src="/images/right.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="cell-wrap cell-one">
+        <view bindtap="myQrcode" class="cell">
+            <view class="cell-left">
+                <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020111905.png?sign=60fe1b4dc10e5f69b464097c6263d66c&t=1605619395" style="width: 45rpx;height: 45rpx;"></image>
+                <text>生成考试码</text>
+            </view>
+            <view class="cell-right">
+                <image src="/images/right.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="cell-wrap cell-one" wx:if="{{admin}}">
+        <view bindtap="toInvite" class="cell">
+            <view class="cell-left">
+                <image src="/images/invite.png"></image>
+                <text>邀请好友</text>
+            </view>
+            <view class="cell-right">
+                <image src="/images/right.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="cell-wrap" style="margin-bottom:88rpx;"></view>
+</view>

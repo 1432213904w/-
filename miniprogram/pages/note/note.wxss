@@ -1,0 +1,195 @@
+/* miniprogram/pages/exam/exam.wxss */
+.page{
+    position: absolute;
+    height:100%;
+    background-color: #8fdbff;
+    background: url(https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/sky.jpg?sign=d48b9c50a00ae0bb0e858679474a45e3&t=1615337150);
+    background-size: 100% 100%; 
+    padding-top: 250rpx;
+}
+.page .footer{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+}
+.page .footer image{
+    z-index: 1;
+}
+
+.page .footer image{
+    z-index: 1;
+}
+
+.page .body{
+    width: 700rpx;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50rpx 10rpx;
+}
+
+.page .body .image{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.page .body .image .typename{
+    width: 360rpx;
+    height:100rpx;
+    margin-top: -105rpx;
+    background: url(https://6f6e-onlineexam-2tqbw-1303113698.tcb.qcloud.la/WechatIMG81.png?sign=57f7dd0474b1281cb247b833a5454812&t=1600311494) no-repeat center;
+    background-size: 100% auto;
+    text-align: center;
+   
+}
+
+.page .body .image .value{
+    color: #fff;
+    margin-top: 20rpx;
+}
+
+.page .body .question{
+    padding: 0 20rpx;
+}
+
+.page .body .question .title{
+    padding: 20rpx 0;
+}
+
+.page .body .question .options{
+
+}
+
+.page .body .question .options .option{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333;
+    font-size: 28rpx;
+    padding: 10rpx 10rpx 0;
+    margin-bottom: 25rpx;
+    line-height: 2.5;
+    cursor: pointer;
+    border: 2rpx solid #bfbfbf;
+    
+}
+.page .body .question .options .selected{
+    border: 2rpx solid #fbb03b;
+    color: #fff;
+    background: #fbb03b;
+}
+.page .body .question .green{
+    color: #34a30a;
+    border: 2rpx solid #34a30a;
+    border-left: 10rpx solid #34a30a;
+    background-image:url("http://file.xiaomutong.com.cn/20200701/true.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 30rpx;
+}
+.page .body .question .red{
+    color: #f00;
+    border: 2rpx solid #f00;
+    border-left: 10rpx solid #f00;
+    background-image:url("http://file.xiaomutong.com.cn/20200701/false.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 30rpx;
+}
+.page .body .btn-area{
+    z-index: 99;
+    padding: 20rpx;
+}
+.page .body .btn-area .button{
+    z-index: 99;
+    background: #fbb03b;
+    box-shadow: 2rpx 2rpx 6rpx #fbb03b;
+    border-radius: 3rpx;
+    text-align: center;
+    font-size: 25rpx;
+    color: #fff;
+    padding: 20rpx 0;
+
+}
+
+.page .message{
+    padding-left: 20rpx;
+    color: #3e95ff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.page .modal{
+    background: url(http://file.xiaomutong.com.cn/img202006201500.png) no-repeat center top;
+    background-size: 100% auto; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 350rpx;
+    height: 507rpx;
+    padding: 150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.page .modal .button{
+    z-index: 99;
+    width: 250rpx;
+    padding: 20rpx 0;
+    background-color: #f00;
+    color: #fff;
+    position: absolute;
+    bottom: -5px;
+    text-align: center;
+    border-radius: 12rpx;
+
+}
+input{
+    border: 1px solid #cdcdcd;
+    height: 150rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    
+}
+
+.info{
+    padding: 30rpx 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.info .message{
+    color: #34a30a;
+}
+
+.kefu{
+    position: relative;
+    background: url(https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img20210310.png?sign=487cad90f73ec550b5b216956cd41307&t=1615336943) no-repeat center bottom;
+    background-size: 100% auto;
+    
+    position: absolute;
+    bottom: 100rpx;
+    right: 100rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    
+
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50px;
+    box-shadow:  8px 8px 15px #d9d9d9,
+                 -8px -8px 15px #ffffff;
+}

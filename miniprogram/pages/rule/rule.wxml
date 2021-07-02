@@ -1,0 +1,6 @@
+<view class="page-about">
+    <view class="title">使用帮助</view>
+    <view class="content"><text class="sortnum">1</text>在线考试：此功能是用来实现考试模式，每次作答只有一次机会，答错题目记录在我的错题模块</view>
+    <view class="content"><text class="sortnum">2</text>顺序练习：此功能是用来实现习题练习，习题是按照顺序练习，每次进入习题顺序相同</view>
+    <view class="content"><text class="sortnum">3</text>随机练习：此功能是用来实现习题练习，习题是按照随机的顺序练习，每次进入习题的顺序是随机的</view>
+</view>

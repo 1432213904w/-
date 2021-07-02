@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-checkbox-group": "../../weui-components/checkbox-group/checkbox-group",
+    "mp-checkbox": "../../weui-components/checkbox/checkbox",
+    "mp-cells": "../../weui-components/cells/cells",
+    "mp-cell": "../../weui-components/cell/cell"
+  }
+}

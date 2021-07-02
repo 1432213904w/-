@@ -1,0 +1,9 @@
+<view class="page-about">
+    <view class="title">关于我们</view>
+  
+    <view class="desc">利用微信小程序开发知识竞赛系统，组织者可以通过它快捷方便的创建题库，发布试卷，发起竞赛，并由系统自动批改。用户可以通过登录小程序，便携式完成答题或问卷等各项事宜，给参赛者带来良好的用户体验。通过设计和布署云服务器，提高竞赛系统配置性和可维护性。基于微信小程序开发的知识竞赛系统，为师生提供更加方便快捷的知识竞赛服务。</view>
+
+    <view class="adContainer">
+        <ad unit-id="adunit-fd5e5bbf6b24f954"></ad>
+    </view>
+</view>

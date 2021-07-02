@@ -1,0 +1,10 @@
+<!--WXML示例代码-->
+<view>
+    <mp-cells title="请选择需要开放的题库，可支持多选">
+        <mp-checkbox-group prop="checkbox" multi="{{true}}" bindchange="checkboxChange">
+            <mp-checkbox wx:for="{{checkboxItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+        </mp-checkbox-group>
+    </mp-cells>
+    <view style="height:65px;"></view>
+    <view bindtap="complete" class="footer">完成</view>
+</view>

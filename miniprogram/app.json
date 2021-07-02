@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/start/start",
+    "pages/select/select",
+    "pages/help/help",
+    "pages/someinfo/someinfo",
+    "pages/status/status",
+    "pages/category/category",
+    "pages/me/me",
+    "pages/meinfo/meinfo",
+    "pages/info/info",
+    "pages/random/random",
+    "pages/errorpage/errorpage",
+    "pages/collecpage/collecpage",
+    "pages/errorstar/errorstar",
+    "pages/examhome/examhome",
+    "pages/exam/exam",
+    "pages/examresult/examresult",
+    "pages/grade/grade",
+    "pages/feedback/feedback",
+    "pages/rank/rank",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/about/about",
+    "pages/wechat/wechat",
+    "pages/view/view",
+    "pages/hot/hot",
+    "pages/load/load",
+    "pages/export/export",
+    "pages/list/list",
+    "pages/course/course",
+    "pages/sort/sort",
+    "pages/rule/rule",
+    "pages/qrcode/qrcode",
+    "pages/welcome/welcome",
+    "pages/userInfo/userInfo",
+    "pages/history/history",
+    "pages/auth/auth",
+    "pages/note/note",
+    "pages/collection/collection",
+    "pages/collectionhome/collectionhome"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#45B787",
+    "navigationBarTitleText": "知识竞赛系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#00b2f4",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "iconPath": "/icons/home.png",
+        "selectedIconPath": "/icons/home-selected.png",
+        "text": "首页",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "iconPath": "/icons/me.png",
+        "selectedIconPath": "/icons/me-selected.png",
+        "text": "我的",
+        "pagePath": "pages/me/me"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "sitemapLocation": "sitemap76.json"
+}

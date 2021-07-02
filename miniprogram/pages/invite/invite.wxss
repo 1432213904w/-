@@ -1,0 +1,22 @@
+@import "../../lib/weui.wxss";
+
+.page-section{
+  margin-bottom: 20rpx;
+}
+
+.page-body .btn-area{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.page-body .btn-area .button{
+    background-color: #1bcfad;
+    width: 375rpx;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #fff;
+    text-align: center;
+}

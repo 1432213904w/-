@@ -1,0 +1,56 @@
+/* miniprogram/pages/wechat/wechat.wxss */
+@import "../../lib/weui.wxss";
+.page{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.page .title{
+    text-align: left;
+    padding: 10px
+}
+.page .input{
+    width: 90%;
+    text-align: left;
+    padding: 20px 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    
+}
+.page .input .inputtitle{
+    padding: 10px 0;
+}
+.page .input .dept input{
+    border: 1px solid #f0f0f0;
+}
+.page .image{
+
+}
+.page .btn-area{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.page .btn-area button{
+    background-color: #1bcfad;
+    width: 375rpx;
+    border-radius: 40px;
+    padding: 0px 10px;
+    color: #fff;
+    line-height: 1.5;
+}
+radio-group {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+.radio {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 5px;
+    width: 100%;
+}

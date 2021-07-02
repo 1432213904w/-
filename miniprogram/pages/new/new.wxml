@@ -1,0 +1,17 @@
+<view class="page-body">
+  
+    <view class="page-section">
+        <view class="weui-cells__title">请在下面文本框内输入邀请码</view>
+        <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <input class="weui-input" auto-focus placeholder="请输入" bindinput="bindKeyInput" />
+        </view>
+        </view>
+    </view>
+
+    
+    <view class="btn-area">
+        <view class="button" bindtap='goOk'>确定</view>
+    </view>
+  
+</view>

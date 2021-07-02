@@ -1,0 +1,26 @@
+<view class="center-wrap topBG">
+  <view class="topBG">
+        <view class="header">
+          <image class="head" src="{{userInfo.avatarUrl}}"></image>
+          <view class="name">{{userInfo.nickName}}</view>
+        </view>
+  </view>
+  <view class="cell-list">
+      <view bindtap="go_view" class="cell" data-viewInd="{{index}}" wx:for="{{menus}}" wx:key="{{index}}">
+        <view class="cell-left">
+          <view class="cell-icon">
+            <image src="{{item.icon}}"></image>
+          </view>
+          <view class="cell-text">
+            <text wx:if="{{item.title!='分享好友'}}">{{item.title}}</text>
+            <button openType="share" style="width:150%" wx:if="{{item.title=='分享好友'}}">{{item.title}}</button>
+          </view>
+        </view>
+        <view class="cell-right">
+          <image src="/images/jkt/right.png"></image>
+        </view>
+    </view>
+  </view>
+
+</view>
+

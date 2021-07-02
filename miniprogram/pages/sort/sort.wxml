@@ -1,0 +1,78 @@
+<!--pages/moni/moni.wxml-->
+<view class="tab-wrap">
+    <view class="tab">
+        <view bindtap="changeTab" data-textTab="答题模式">
+            <text class="{{selectInd?'blue':''}}">答题模式</text>
+            <span class="{{selectInd?'span':''}}"></span>
+        </view>
+        <view bindtap="changeTab" data-textTab="背题模式">
+            <text class="{{!selectInd?'blue':''}}">背题模式</text>
+            <span class="{{!selectInd?'span':''}}"></span>
+        </view>
+    </view>
+</view>
+<view style="height: 80rpx;"></view>
+<view style="height:20rpx;background:#f5f6f7"></view>
+<view class="address-green" wx:if="{{recmend}}">已自动回到上次答题的位置</view>
+<import src="../public/moniq/moniq.wxml"></import>
+<view class="page">
+  <swiper autoplay="{{autoplay}}" bindchange="pageChange" class="{{videoMedia&&videoctrl?'flexauto':'noflex'}}" current="{{current}}" duration="500" indicatorDots="{{false}}" interval="{{interval}}" wx:if="{{!iconIndtwo}}">
+    <swiper-item wx:for="{{questions}}" wx:for-item="item" wx:key="key">
+        <template is="answer" data="{{item:item,textTab:textTab,videoctrl:videoctrl,testMode:testMode}}"></template>
+    </swiper-item>
+  </swiper>
+</view>
+<view bindtap="_updown" class="footer-mark" wx:if="{{iconInd}}"></view>
+<view class="footer {{iconInd?'test-one':'test-active'}}">
+    <view class="header">
+        <view bindtap="_updown" class="h-left">
+            <view>
+                <image src="/images/q_answer_sheet_right.png"></image>
+                <text style="color:#33c500">{{greenNum}}</text>
+            </view>
+            <view>
+                <image src="/images/q_answer_sheet_wrong.png"></image>
+                <text style="color:#ff3030">{{redNum}}</text>
+            </view>
+            <view>
+                <image src="/images/q_answer_sheet_number.png"></image>
+                <text>{{skipnum+currIndex+1}}/{{skipnum+questions.length}}</text>
+            </view>
+        </view>
+        <view bindtap="starcollect" class="h-right">
+            <image src="/images/nav_test_icon_fav.png" wx:if="{{!favor}}"></image>
+            <image src="/images/star-active.png" wx:if="{{favor}}"></image>
+            <text>收藏</text>
+        </view>
+        <view bindtap="del_data" class="h-right" wx:if="{{iconInd}}">
+            <text>清空记录</text>
+        </view>
+    </view>
+    <view bindtouchmove="scrolltop" class="{{iconInd?'wrap-icon-active':'wrap-icon'}}">
+        <scroll-view scrollY style="height: 100%">
+        <view class="icon-circle">
+            <view class="circle-wrap">
+                <view bindtap="jumpToQuestion" data-id="{{item}}" data-index="{{index}}" wx:for="{{arr}}" wx:for-index="index" wx:for-item="item" wx:key="key2">
+                    <view class="now" wx:if="{{questions[index]['selected'] == false}}">{{index}}</view>
+                    <view class="red" wx:if="{{questions[index]['selected'] && questions[index]['right'] == 0}}">{{index}}</view>
+                    <view class="green" wx:if="{{questions[index]['selected'] && questions[index]['right'] == 1}}">{{index}}</view>
+                </view>
+            </view>
+        </view>
+        </scroll-view>
+    </view>
+</view>
+
+
+
+<div class="overlay" wx:if="{{showModal}}"></div>
+<view class="modal-wrapper" wx:if="{{showModal}}">
+  <view class="modal" > 
+    <image src="https://7765-weixinquestion-4ltg8-1301202106.tcb.qcloud.la/img2020123101.png?sign=0071fff5d01d50b1f78601b5056a76e2&t=1609410174" />
+    <view class="message">左右滑动可轻松切换上下题哦</view>
+
+    <view class="button" bindtap="closeModal">我知道了</view>
+  </view>
+    
+
+</view>

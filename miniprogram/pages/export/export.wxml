@@ -1,0 +1,7 @@
+<view class="page-load">
+
+    <view class="file" style="width: 100%;border: 1px solid #efefef;height:50px;">{{fileUrl}}</view>
+     <button class="btn" type="primary"  bindtap="copyFileUrl">
+        复制信息
+    </button>
+</view>

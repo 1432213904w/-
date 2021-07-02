@@ -1,0 +1,14 @@
+<view class="page-wrapper">
+
+  <view class="title">
+    请长按保存到手机或者发送给对应考试的人
+  </view>
+  <view class="category">
+    <view class="code">{{category._id}}</view>
+    <view class="name">{{category.name}}</view>
+  </view>
+  <view class='imgList-li' wx:for='{{imgArr}}' style="height: 320px;">
+    <image class='paycode' src='{{item}}' data-index='{{index}}' bindtap='previewImg'></image>
+  </view>
+
+</view>

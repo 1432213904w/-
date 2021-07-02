@@ -1,0 +1,45 @@
+<view class="page">
+    <view class="wrap">
+        <view>
+            <text class="title">题库名称</text>
+            <text class="car">{{use_title}}</text>
+        </view>
+        <view>
+            <text class="title">考题数量</text>
+            <text class="car">
+                <text class="blue">{{quesNum}}</text>题目</text>
+        </view>
+
+        <view class="item">
+            <text class="title">当前已刷</text>
+            <text class="car">
+                <text class="blue">{{skipnum}}</text>
+                <text>题</text>
+            </text>
+        </view>
+
+        <view>
+            <text class="title">练习模式</text>
+            <text class="car">顺序练习</text>
+        </view>
+        <view>
+            <text class="title">出题规则</text>
+            <text class="car">每次顺序展示该题库50个题目</text>
+        </view>
+
+        <view>
+            <text class="title">注意事项</text>
+            <text class="car" style="color:#f00;">答题过程尽量不要跳题</text>
+        </view>
+ 
+        <view class="btn-area" bindtap="defaultGo" wx:if="{{skipnum < quesNum - 1}}">
+        <text>开始练习</text>
+        </view>
+
+        <view class="btn-area" bindtap="repeatGo" wx:if="{{skipnum >= quesNum - 1}}">
+        <text>重新练习</text>
+        </view>
+
+
+    </view>
+</view>

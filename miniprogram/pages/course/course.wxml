@@ -1,0 +1,13 @@
+<view class="start-page">
+    <view class="item" hoverClass="presshover">
+        <view class="item-inner">
+            <view class="name">请选择题库</view>
+        </view>
+    </view>
+    <i-radio-group current="{{current}}" bindchange="handleChange">
+        <i-radio position="right" color="#00b2f4" wx:for="{{cateList}}" wx:for-index="driveInd" wx:for-item="driveName" wx:key="drive" value="{{driveName.name}}">
+        </i-radio>
+    </i-radio-group>
+    <view style="height:65px;"></view>
+    <view bindtap="clickOver" class="footer">完成</view>
+</view>

@@ -1,0 +1,16 @@
+<view>
+    <view bindtap="goquestion" class="special-title" data-chapter_id="all" data-ids="{{question_ids}}" data-title="{{category.name}}" style="border-bottom:10px solid #f5f6f7">
+        <view>
+            <!-- <image src="../../images/test_icon1@2x.png" style="width:15px;height:15px;"></image> -->
+            <text>{{category.name}}</text>
+        </view>
+        <view>
+            <view class="num" style="margin-right:5px;line-height:15px;">{{nums}} </view>
+            <image class="direction" src="../../images/jkt/right.png"></image>
+        </view>
+    </view>
+</view>
+<view bindtap="goOrderPlay" class="errorstat" wx:if="{{count==0}}">
+    <text>你收藏的题目会自动记录到这里</text>
+    <view class="button">去练习</view>
+</view>
